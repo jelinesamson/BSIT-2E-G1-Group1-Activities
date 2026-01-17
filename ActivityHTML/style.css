@@ -1,0 +1,147 @@
+header {
+    background-color: #EBA7AC;
+    color: white;
+    display: flex;
+    font-family: Arial, sans-serif; 
+    flex-direction: column;
+    align-items: center; 
+    padding: 2rem 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: #e0e0e0; 
+    text-decoration: underline;
+}
+.banner{
+background: #E17F93;
+color: white;
+text-align:center;
+Padding:40px 20px;
+font-family:Arial, Sans-serif;
+ }
+
+.banner h1{ 
+margin:0;
+font-size:36px;
+}
+
+.banner p{
+margin:10px 0 0;
+font-size:18px;
+}
+
+.features-section {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.feature-col {
+    display: inline-block; 
+    width: 30%;            
+    vertical-align: top;   
+    margin: 1%;
+    text-align: left;      
+}
+
+.feature-col img {
+    width: 100%;           
+    height: auto;
+    background-color: #ddd; 
+    margin-bottom: 15px;
+}
+
+.feature-col h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.feature-item p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.pricing-wrapper {
+    text-align: center; 
+    padding: 30px;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.card {
+    display: inline-block; 
+    width: 25%;            
+    vertical-align: top;   
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #CD5E77;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif ;
+    
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0);
+    border-radius: 5px;
+}
+
+.featured {
+    border: 2px solid #CD5E77;
+}
+
+p.price {
+    font-family: Arial, sans-serif ;
+    font-size: 20px ;
+    color: #CD5E77 ;
+    margin: 15px 0;
+}
+
+.btn {
+    background-color: #CD5E77;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+footer
+{
+    background-color: #EBA7AC;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+ 
