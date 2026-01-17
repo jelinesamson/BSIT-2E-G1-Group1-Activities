@@ -89,3 +89,51 @@ font-size:18px;
     font-size: 0.95rem;
     line-height: 1.4;
 }
+
+.pricing-wrapper {
+    text-align: center; 
+    padding: 30px;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.card {
+    display: inline-block; 
+    width: 25%;            
+    vertical-align: top;   
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #CD5E77;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif ;
+    
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0);
+    border-radius: 5px;
+}
+
+.featured {
+    border: 2px solid #CD5E77;
+}
+
+p.price {
+    font-family: Arial, sans-serif ;
+    font-size: 20px ;
+    color: #CD5E77 ;
+    margin: 15px 0;
+}
+
+.btn {
+    background-color: #CD5E77;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
