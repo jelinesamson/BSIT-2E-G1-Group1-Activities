@@ -34,21 +34,3 @@ nav a:hover {
     color: #e0e0e0; 
     text-decoration: underline;
 }
-
-.banner{
-background: rgba(77, 165, 237, 0.874);
-color: white;
-text-align:center;
-Padding:40px 20px;
-font-family:Arial, Sans-serif;
- }
-/*Font size*/
-.banner h1{ 
-margin:0;
-font-size:36px;
-}
-/*Little one on the bottom*/
-.banner p{
-margin:10px 0 0;
-font-size:18px;
-}
