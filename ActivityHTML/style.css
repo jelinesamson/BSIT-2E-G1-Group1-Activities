@@ -52,3 +52,40 @@ font-size:36px;
 margin:10px 0 0;
 font-size:18px;
 }
+
+.features-section {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.feature-col {
+    display: inline-block; 
+    width: 30%;            
+    vertical-align: top;   
+    margin: 1%;
+    text-align: left;      
+}
+
+.feature-col img {
+    width: 100%;           
+    height: auto;
+    background-color: #ddd; 
+    margin-bottom: 15px;
+}
+
+.feature-col h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.feature-item p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
