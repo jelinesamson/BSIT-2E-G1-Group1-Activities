@@ -137,3 +137,11 @@ p.price {
     margin-top: 15px;
     cursor: pointer;
 }
+footer
+{
+    background-color: #EBA7AC;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+ 
