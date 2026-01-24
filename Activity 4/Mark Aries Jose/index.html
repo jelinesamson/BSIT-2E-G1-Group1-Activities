@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Data Sheet</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f3f5;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 14px 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.blue { background: #0d6efd; }
+.green { background: #198754; }
+
+.card-body {
+    padding: 25px;
+}
+
+.section-title {
+    color: #0d6efd;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    background: #e9f2ff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 12px;
+    display: none;
+}
+
+.result {
+    display: none;
+}
+
+.result p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- FORM -->
+<div class="card">
+    <div class="card-header blue">Personal Data Sheet</div>
+    <div class="card-body">
+
+        <div class="section-title">Personal Information</div>
+
+        <div class="row">
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" id="fullname">
+            </div>
+            <div class="field">
+                <label>Date of Birth</label>
+                <input type="date" id="dob">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="field">
+                <label>Gender</label>
+                <select id="gender">
+                    <option value="" selected disabled>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Prefer not to say</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Civil Status</label>
+                <select id="status">
+                    <option value="" selected disabled>Select Status</option>
+                    <option>Single</option>
+                    <option>Married</option>
+                    <option>Widowed</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section-title">Contact Information</div>
+
+        <div class="row">
+            <div class="field">
+                <label>Email Address</label>
+                <input type="email" id="email">
+            </div>
+            <div class="field">
+                <label>Mobile Number</label>
+                <input type="text" id="mobile" maxlength="11"
+                       oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Complete Address</label>
+            <input type="text" id="address">
+        </div>
+
+        <br>
+        <button onclick="submitData()">Submit Personal Data Sheet</button>
+        <div class="error-message" id="errorMessage"></div>
+
+    </div>
+</div>
+
+<!-- RESULT -->
+<div class="card result" id="result">
+    <div class="card-header green">Submitted Information</div>
+    <div class="card-body">
+        <p><b>Full Name:</b> <span id="rname"></span></p>
+        <p><b>Date of Birth:</b> <span id="rdob"></span></p>
+        <p><b>Gender:</b> <span id="rgender"></span></p>
+        <p><b>Status:</b> <span id="rstatus"></span></p>
+        <p><b>Email:</b> <span id="remail"></span></p>
+        <p><b>Mobile:</b> <span id="rmobile"></span></p>
+        <p><b>Address:</b> <span id="raddress"></span></p>
+    </div>
+</div>
+
+</div>
+
+<script>
+function submitData() {
+
+    let fullname = fullnameEl.value.trim();
+    let dob = dobEl.value;
+    let gender = genderEl.value;
+    let status = statusEl.value;
+    let email = emailEl.value.trim();
+    let mobile = mobileEl.value.trim();
+    let address = addressEl.value.trim();
+
+    if (!fullname) return showError("Please enter your full name");
+    if (!dob) return showError("Please select your date of birth");
+    if (!gender) return showError("Please select your gender");
+    if (!status) return showError("Please select your civil status");
+    if (!email) return showError("Please enter your email");
+    if (!mobile) return showError("Please enter your mobile number");
+    if (mobile.length !== 11) return showError("Mobile number must be 11 digits");
+    if (!address) return showError("Please enter your address");
+
+    errorMessage.style.display = "none";
+    result.style.display = "block";
+
+    rname.textContent = fullname;
+    rdob.textContent = dob;
+    rgender.textContent = gender;
+    rstatus.textContent = status;
+    remail.textContent = email;
+    rmobile.textContent = mobile;
+    raddress.textContent = address;
+
+    result.scrollIntoView({ behavior: "smooth" });
+}
+
+function showError(msg) {
+    errorMessage.textContent = msg;
+    errorMessage.style.display = "block";
+}
+
+// Correct element references
+const fullnameEl = document.getElementById("fullname");
+const dobEl = document.getElementById("dob");
+const genderEl = document.getElementById("gender");
+const statusEl = document.getElementById("status");
+const emailEl = document.getElementById("email");
+const mobileEl = document.getElementById("mobile");
+const addressEl = document.getElementById("address");
+const errorMessage = document.getElementById("errorMessage");
+const result = document.getElementById("result");
+const rname = document.getElementById("rname");
+const rdob = document.getElementById("rdob");
+const rgender = document.getElementById("rgender");
+const rstatus = document.getElementById("rstatus");
+const remail = document.getElementById("remail");
+const rmobile = document.getElementById("rmobile");
+const raddress = document.getElementById("raddress");
+</script>
