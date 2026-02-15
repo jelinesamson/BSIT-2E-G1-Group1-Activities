@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cfcfd1;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+#currentDate {
+    font-size: 14px;
+    color: #555;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.form-table {
+    width: 420px;
+    margin: 20px auto;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.form-table td {
+    padding: 6px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #1e88e5;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #1e88e5, #1565c0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+table.task-table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+th {
+    background-color: #1565c0;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+.high {
+    color: red;
+    font-weight: bold;
+}
+
+.medium {
+    color: orange;
+    font-weight: bold;
+}
+
+.low {
+    color: green;
+    font-weight: bold;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.actions button {
+    width: auto;
+    padding: 6px 10px;
+    margin: 2px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.edit-btn {
+    background-color: #f4c542;
+}
+
+.delete-btn {
+    background-color: #e57373;
+    color: white;
+}
+
+.complete-btn {
+    background-color: #81c784;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.complete-btn:hover {
+    background-color: #4caf50;
+}
