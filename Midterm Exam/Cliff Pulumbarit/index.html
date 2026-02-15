@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Header -->
+        <header>
+            <h1>Student Task Manager</h1>
+            <p id="current-date"></p>
+        </header>
+
+        <!-- Task form -->
+        <section class="form-section">
+            <form id="task-form">
+                <table class="form-table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="task-title">Task Title</label>
+                                <input 
+                                    type="text" 
+                                    id="task-title" 
+                                    name="task-title" 
+                                    placeholder="Task Title"
+                                    required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="task-description">Task Description</label>
+                                <input 
+                                    type="text" 
+                                    id="task-description" 
+                                    name="task-description" 
+                                    placeholder="Task Description"
+                                    required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="task-priority">Select Priority</label>
+                                <select id="task-priority" name="task-priority" required>
+                                    <option value="">Select Priority</option>
+                                    <option value="High">High</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="task-due-date">Due Date</label>
+                                <input 
+                                    type="date" 
+                                    id="task-due-date" 
+                                    name="task-due-date"
+                                    required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="button-cell">
+                                <button type="submit" id="submit-btn" class="btn-save">Save Task</button>
+                                <button type="button" id="cancel-btn" class="btn-cancel" style="display: none;">Cancel</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+
+        <!-- Tasks display -->
+        <section class="tasks-section">
+            <table class="tasks-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Priority</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tasks-tbody">
+                    <!-- Dynamic tasks -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
