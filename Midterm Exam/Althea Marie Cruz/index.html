@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Task Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="title-container">
+    <h1>Student Task Manager</h1>
+    <div class="dateText" id="currentDate"></div>
+</div>
+
+<div class="form-container">
+<form id="taskForm">
+
+<input type="text" id="title" placeholder="Task / Subject">
+<input type="text" id="description" placeholder="Notes / Details">
+
+<select id="priority">
+    <option value="">Choose Priority</option>
+    <option style="color:red;">Urgent</option>
+    <option style="color:orange;">Normal</option>
+    <option style="color:green;">Can Wait</option>
+</select>
+
+<input type="date" id="dueDate">
+
+<button type="submit">Save Task</button>
+<div class="warning" id="warningMsg"></div>
+
+</form>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Task / Subject</th>
+<th>Notes / Details</th>
+<th>Priority</th>
+<th>Deadline</th>
+<th>Progress</th>
+<th>Options</th>
+</tr>
+</thead>
+<tbody id="taskTableBody"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>

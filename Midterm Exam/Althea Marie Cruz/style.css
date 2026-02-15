@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef1f3;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 5px;
+    color: #1f3a40;
+}
+
+.title-container {
+    background-color: #298fd3;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+.title-container h1 { margin: 0; font-size: 28px; }
+.title-container .dateText { color: #e0f7fa; font-size: 16px; margin-top: 5px; }
+
+.form-container {
+    max-width: 420px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1c558a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover { background-color: #3685c5; }
+
+.warning {
+    color: #c0392b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #dce3e6;
+}
+
+.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+}
+
+.actionBtn {
+    padding: 4px 6px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.completeBtn { background-color: #2ecc71; color: white; }
+.editBtn { background-color: #f4d03f; }
+.deleteBtn { background-color: #e74c3c; color: white; }
+
+.completeBtn:hover,
+.editBtn:hover,
+.deleteBtn:hover {
+    opacity: 0.8;
+}
