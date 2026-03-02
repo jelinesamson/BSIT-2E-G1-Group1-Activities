@@ -22,8 +22,6 @@ echo "\n";
 echo "------------------------------------------------\n";
 
 $grandTotal = 0;
-
-// Items given in the problem
 $grandTotal += makeReceipt(2, "ITEM 1", 100);
 $grandTotal += makeReceipt(7, "ITEM 2", 35);
 $grandTotal += makeReceipt(1, "ITEM 3", 350);
