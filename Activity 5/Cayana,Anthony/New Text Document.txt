@@ -1,0 +1,47 @@
+<?php
+
+function receiptActivity($items) {
+    $overallTotal = 0;
+
+    echo "<pre>";
+    echo "QTY   DESC      AMT     Total\n";
+    echo "------------------------------------------\n";
+
+    foreach ($items as $row) {
+        $qty = $row["qty"];
+        $item = $row["item"];
+        $amt = $row["amount"];
+        
+        $total = $qty * $amt;
+        $overallTotal += $total;
+        
+        echo "($qty)  $item    $amt     $total\n";
+    }
+
+    echo "------------------------------------------\n";
+    echo "Overall Total: Php $overallTotal\n";
+    echo "</pre>";
+}
+
+$groceryItems = array(
+    array(
+        "item" => "ITEM 1",
+        "qty" => 2,
+        "amount" => 100),
+    array(
+        "item" => "ITEM 2",
+        "qty" => 7,
+        "amount" => 35),
+    array(
+        "item" => "ITEM 3",
+        "qty" => 1,
+        "amount" => 350),
+    array(
+        "item" => "ITEM 4",
+        "qty" => 2,
+        "amount" => 20)
+);
+
+receiptActivity($groceryItems);
+
+?>
